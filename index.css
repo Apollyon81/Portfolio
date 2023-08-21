@@ -1,0 +1,155 @@
+.container {
+    padding: 0px 30px;
+}
+
+body {
+    color: white;
+    background-color: black;
+    font-family:  Arial, Helvetica, sans-serif;
+    margin-left: 9px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    font-size: 14px;
+    padding-left: 420px;
+    text-transform: uppercase;
+}
+
+.header a {
+    padding: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.icons_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 180px;
+}
+
+.icons_header img {
+    height: 29px;
+    width: 29px;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.icons_header a {
+    align-items: center;
+    padding: 8px;
+    z-index: 1; 
+}
+
+.icons_header ul {
+    padding-left: 0px;
+    gap: 7px;
+    z-index: 1;
+}
+
+.icons_header li {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+
+.icons_header li::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: white;
+    border-radius: 100%;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.icons_header li:hover::before {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    opacity: 1;
+}
+
+#github:hover {
+    filter: invert(1);
+}
+
+.header a:hover {
+    color: white 
+}
+
+.name {
+    font-size: 27px;
+    padding-left: 120px;
+}
+
+.logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid green;
+}
+
+h1 {
+    color: green;
+}
+
+.center {
+   text-align: center;
+}
+
+main {
+    background-color: black;
+    text-align: center;
+}
+
+.icons a {
+    color: white;
+    text-decoration: none;
+}
+
+.icons img {
+    width: 43px;
+    height: 43px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons a {
+    margin: 20px;
+    text-align: center;
+}
+
+footer.icons p {
+    color: white;
+}
