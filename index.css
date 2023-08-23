@@ -1,13 +1,26 @@
 .container {
-    padding: 0px 30px;
+    font-family: sans-serif;
+    border-top: 0px;
+    border-right: 0px;
 }
 
 body {
     color: white;
     background-color: black;
-    font-family:  Arial, Helvetica, sans-serif;
-    margin-left: 9px;
 }
+
+.name {
+    font-size: 29px;
+    padding-left: 120px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.603);
+    justify-content: space-between;
+}
+
 
 .header {
     display: flex;
@@ -15,62 +28,67 @@ body {
     width: 100%;
     height: 80px;
     align-items: center;
+    opacity: 1;
 }
 
 .header ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 420px;
-    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .header a {
-    padding: 40px;
+    padding: 30px;
     text-decoration: none;
     color: white;
+    font-size: 16px;
 }
 
 .icons_header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 180px;
+    padding-right: 200px;
 }
 
 .icons_header img {
-    height: 29px;
-    width: 29px;
+    display: inline flex;
+    padding: 9px;
+    height: 23px;
+    width: 23px;
     align-items: center;
     justify-content: center;
     object-fit: contain;
-    z-index: 1;
+    border-radius: 50%;
 }
 
 .icons_header a {
+    display: inline-flex;
     align-items: center;
-    padding: 8px;
-    z-index: 1; 
+    z-index: 1;
+    padding: 0px;
+    text-decoration: underline; 
+    border-radius: 50%;
 }
 
 .icons_header ul {
     padding-left: 0px;
     gap: 7px;
-    z-index: 1;
+    border-radius: 50%;
 }
 
 .icons_header li {
-    width: 40px;
-    height: 40px;
+    display: inline-flex;
+    width: 37px;
+    height: 37px;
     border: 1px solid white;
-    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 
@@ -85,28 +103,27 @@ body {
     left: 50%; 
     transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s;
+   
+    pointer-events: none;
 }
 
 .icons_header li:hover::before {
-    width: 100%;
-    height: 100%;
+    width: 41px;
+    height: 41px;
     align-items: center;
     justify-content: center;
     z-index: -1;
     opacity: 1;
+    border-color: none ;
 }
+
 
 #github:hover {
     filter: invert(1);
 }
 
-.header a:hover {
-    color: white 
-}
-
-.name {
-    font-size: 27px;
-    padding-left: 120px;
+.logo {
+    padding-top: 150px;
 }
 
 .logo img {
@@ -114,6 +131,7 @@ body {
     height: 180px;
     border-radius: 50%;
     border: 3px solid green;
+
 }
 
 h1 {
