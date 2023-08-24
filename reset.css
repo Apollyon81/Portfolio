@@ -6,6 +6,11 @@
 
 body {
     margin-top: 0px;
-    margin-right: 60px;
+    margin-right: 0px;
     margin-left: 0px;
+}
+
+main {
+    margin-right: 180px;
+    margin-left: 180px;
 }
