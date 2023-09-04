@@ -37,7 +37,7 @@ header {
 }
 
 .header.small {
-    transition: height 0.5s ease;
+    transition: height 0.3s ease;
     height: 70px;
 }
 
@@ -254,14 +254,14 @@ header {
     font-size: 36px;
     place-items: center;
     display: grid;
-    background: linear-gradient(63.13deg, black 51.04%, #8E5D52 51.05%);
+    background: linear-gradient(63.13deg, rgba(128, 0, 128, 0.036) 30%, #5d47889f 40%, #8E5D52 51.05%);
     height: 100vh;
     color: white;
     position: relative;
     
   }
 
- .stars {
+.stars {
     z-index: 50;
     position: absolute;
     top: 34%;
@@ -272,7 +272,7 @@ header {
     z-index: 30;
   }
 
-  .star {
+.star {
     position: absolute;
     background: white;
     pointer-events: none;
@@ -280,7 +280,7 @@ header {
     transform-origin: center center;
   }
 
-  .blinking {
+.blinking {
     animation: blink 2s infinite;
   }
 
@@ -302,9 +302,12 @@ header {
 }
 
 
-.about-me h1 {
 
+.about-me h1 {
+    font-size: 55px;
+    z-index: 50;
 }
+
 
 .logo img {
     width: 280px;
