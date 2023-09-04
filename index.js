@@ -10,60 +10,94 @@ window.addEventListener('scroll', () => {
 
 
 const blinkingStars = [];
+const maxStars = 198; // Limite máximo de estrelas temporárias
+const starsContainer = document.querySelector('.stars');
 
-function createStar(isBlinking, isSmall) {
+// Função para gerar tamanhos aleatórios com base em parâmetros
+function getRandomStarSize(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+// Função para definir o tamanho das estrelas fixas
+function setFixedStarSize(star) {
+    const size = getRandomStarSize(0.1, 3.4); // Tamanho das estrelas fixas (0.1 a 0.9)
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+}
+
+// Função para definir o tamanho das estrelas piscantes
+function setBlinkingStarSize(star) {
+    const size = getRandomStarSize(0.1, 0.8); // Tamanho das estrelas piscantes (1 a 2)
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+}
+
+function createStar(isSmall, isBlinking) {
     const star = document.createElement('div');
     star.classList.add('star');
     star.classList.add('rotated');
-
-    if (isBlinking) {
-        star.classList.add('blinking');
-        blinkingStars.push(star);
-    }
 
     if (isSmall) {
         star.classList.add('small');
     }
 
-    const x = Math.random() * 63; // Ajuste para criar estrelas apenas no gradiente preto
-    const y = Math.random() * 1800;
+    const x = Math.random() * 63;
+    const y = Math.random() * 1300;
 
     star.style.left = `${x}%`;
     star.style.top = `${y}px`;
 
-    const size = isSmall ? Math.random() * 1 + 0.5 : Math.random() * 2 + 1;
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
-   
-
+    if (isBlinking) {
+        setBlinkingStarSize(star); // Define o tamanho das estrelas piscantes
+        blinkingStars.push(star);
+    } else {
+        setFixedStarSize(star); // Define o tamanho das estrelas fixas
+    }
 
     return star;
 }
 
-function toggleBlinkingStars() {
-    for (const star of blinkingStars) {
-        star.style.display = star.style.display === 'none' ? 'block' : 'none';
+function createBlinkingStar() {
+    const star = createStar(true, true);
+    starsContainer.appendChild(star);
+
+    const timeout = Math.random() * 36000 + 3000;
+
+    setTimeout(function () {
+        blinkingStars.shift();
+        star.remove();
+        setTimeout(createBlinkingStar, Math.random() * 6000); // Atraso aleatório entre 0 e 5 segundos para criar uma nova estrela
+    }, timeout);
+}
+
+function addBlinkingStars(count) {
+    for (let i = 0; i < count; i++) {
+        if (blinkingStars.length < maxStars) {
+            createBlinkingStar();
+        }
     }
 }
 
-function addStars(count, isBlinking, isSmall) {
-    const starsContainer = document.querySelector('.stars');
-
+// Adiciona estrelas fixas (80%)
+function addFixedStars(count) {
     for (let i = 0; i < count; i++) {
-        const star = createStar(isBlinking, isSmall);
+        const star = createStar(true, false);
         starsContainer.appendChild(star);
     }
 }
 
-addStars(360); // Adiciona estrelas fixas (80%)
+addFixedStars(450); // Adiciona estrelas fixas (80%)
 
-// Adiciona estrelas que piscam e são pequenas (20%) a cada 1 segundo
-setInterval(function() {
-    addStars(1, Math.random() < 0.2, true); // 20% chance of blinking and being small
-    setTimeout(function() {
-        blinkingStars.shift().remove();
-    }, 100); // Remove a estrela após 1 segundo
+// Adiciona estrelas temporárias (20%) com atraso aleatório
+setInterval(function () {
+    const remainingStars = maxStars - blinkingStars.length;
+    if (remainingStars > 0) {
+        addBlinkingStars(Math.min(remainingStars, 270));
+    }
 }, 1000);
 
-// Função para alternar a visibilidade das estrelas piscantes a cada 0.5 segundos
-setInterval(toggleBlinkingStars, 500);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    addRandomStar();
+});
