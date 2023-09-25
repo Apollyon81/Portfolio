@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>Portfolio</title>
     <link href="reset.css" rel="stylesheet" type="text/css" media="all">
-    <link href="index.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
     <script src="index.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav class="header">
-            <p class="name">Taique</p>
+            <p class="name-header">Taique</p>
             <div class="cube-container">
                 <div class="cube">
                     <div class="s1">
@@ -42,7 +42,7 @@
                     <a hreflang="" href="index.html">Tecnologias</a>
                 </li>
             </ul>
-            <div class="icons_header">
+            <div class="icons_header"style="width: 31px;" >
                 <ul>
                     <li>
                         <a href="https://www.linkedin.com/in/taique-mendes-459577260/" target="_blank" rel="noopener noreferrer">
@@ -50,8 +50,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/Apollyon81" target="_blank" rel="noopener noreferrer">
-                            <img id="github" src="assets/github.svg" alt="">
+                        <a id="github" href="https://github.com/Apollyon81" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/github.svg" alt="">
                         </a>
                     </li>
                     <li>
@@ -61,27 +61,134 @@
                     </li>
                 </ul>
             </div>
-            <div class="conect">                   
-                <span>Contate-me</span>
+            <div class="place-conect">
+                <div class="conect">                   
+                    <span>Contate-me</span>
+                </div>
             </div>
         </nav>
     </header>
-    <section class="about-me">
+    <section class="intro-section">
         <div class="stars"></div>
-        <div class="text-about">
-            <h1>Ola, eu sou Taique <br>Desenvolvedor Fullstack!</h1>
-            <div class="cv">
-                <a href="cvingles.docx">Download CV</a>
+        <div class="content-intro">
+            <div class="text-intro">
+                <p class="i-am">Olá, eu sou</p>
+                <p class="name">Taique Mendes</p>
+                <p class="job">Desenvolvedor Fullstack!</p>
+                <div class="cv">
+                    <a href="assets/cvingles.docx" download>Download CV</a>
+                </div>
             </div>
             <div class="logo">
-                <div class="center">
-                    <img src="assets/logo.jpg" alt="logo"/>
+                <img src="assets/logo.jpg" alt="logo"/>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="about-me">
+        <div class="about-me-content">
+            <h2 class="about">Sobre mim</h2>
+            <p class="text-about">
+            Meu nome é Taique. Ao perceber o potencial 
+            promissor da programação para o mercado e o
+            quão proximo a tecnologia esta se tornando de replicar neurônios, Então iniciei minha jornada de exploração das linguagens
+            de programação e o campo da inteligência artificial.
+            Atualmente estou focando nas tecnologias voltadas ao FrontEnd de Web.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projetos-->
+    <section class="projects">
+        <div class="center-projects">
+            <h2 class="project">Projetos</h2>
+            <div class="projects-itens">
+                <div class="pro">
+                    <div class="breve"><p>EM BREVE</p></div>
+                </div>
+                <div class="pro">
+                    <div class="breve"><p>EM BREVE</p></div>
+                </div>
+                <div class="pro">
+                    <div class="breve"><p>EM BREVE</p></div>
+                </div>
+                <div class="pro visivel oculta">
+                    <div class="breve"><p>EM BREVE</p></div>
+                </div>
+                <div class="pro visivel oculta">
+                    <div class="breve"><p>EM BREVE</p></div>
+                </div>
+                <div class="pro visivel oculta">
+                    <div class="breve"><p>EM BREVE</p></div>
+                </div>
+            </div>
+            <div class="github-project">
+                <button id="ver-mais">Ver mais</button>
+                <a href="https://github.com/Apollyon81">Repositórios no github</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="skills">
+        <div class="center-skills">
+            <h2>Habilidades</h2>
+            <div class="container-skills">
+                <div class="skill-box skill1 html-skill">
+                    <img
+                        style="width: 75px; height: 77px;"
+                        class="icones-habilidades"
+                        src="assets/img-png/html-img.png"
+                        alt="html-icon"
+                    />
+                    <p>HTML</p>
+                </div>
+                <div class="skill-box skill2 css-skill">
+                    <img
+                        style="width: 75px; height: 77px;"
+                        class="icones-habilidades"
+                        src="assets/img-png/css-img.png"
+                        alt="css-icon"
+                    />
+                    <p>CSS</p>
+                </div>
+                <div class="skill-box skill3 js-skill">
+                    <img
+                        style="width: 76px; height: 76px;"
+                        class="icones-habilidades"
+                        src="assets/img-png/js-img.png"
+                        alt="js-icon"
+                        />
+                        <p>JavaScript</p>
+                </div>
+                <div class="skill-box skill4 python-skill">
+                    <img
+                        class="icones-habilidades"
+                        src="assets/python.svg"
+                        alt="python-icon"
+                        />
+                        <p>Python</p>
+                </div>
+                <div class="skill-box skill5 mysql-skill">
+                    <img
+                        class="icones-habilidades"
+                        src="assets/mysql.svg"
+                        alt="mysql-icon"
+                        />
+                    <p>MySQL</p>
+                </div>
+                <div class="skill-box skill6 php-skill">
+                    <img
+                        class="icones-habilidades"
+                        src="assets/php.svg"
+                        alt="php-icon"
+                        />
+                    <P>PHP</P>
                 </div>
             </div>
         </div>
     </section>
     
-    <main>
         <h1>Taique Mendes</h1>
         <br>
         <br>
@@ -151,7 +258,7 @@
         <li><p>- JavaScript ☆☆☆☆☆☆☆☆☆</p></li>
         <li><p>- Django ★☆☆☆☆☆☆☆☆    </p></li>
         <li><p>- SQL ☆☆☆☆☆☆☆☆☆       </p></li>
-    </ul>
+        </ul>
     
     
         <h3>Projetos:</h3>
@@ -159,8 +266,7 @@
             <li><p>- Blog - notícias de tecnologia.                                                 </p></li>
             <li><p>- Site - 20 ações mais barata na bolsa brasileira.                          </p></li>
         </ul>
-    
-    </main>
+    </section>
     
     <br>
     <br>
