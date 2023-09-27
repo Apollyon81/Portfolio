@@ -2,7 +2,8 @@
 <html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
+    <link rel="shortcut icon" href="assets/ico-img/hidro.ico" type="image/x-icon">
+    <title>Portfolio Taique Mendes</title>
     <link href="reset.css" rel="stylesheet" type="text/css" media="all">
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
     <script src="index.js" defer></script>
@@ -28,20 +29,22 @@
                     </div>
                 </div>
             </div>
-            <ul>
-                <li>
-                    <a hreflang="" href="index.html">Início</a>
-                </li>
-                <li>
-                    <a hreflang="" href="index.html">Sobre mim</a>
-                </li>
-                <li>
-                    <a hreflang="" href="index.html">Projetos</a>
-                </li>
-                <li>
-                    <a hreflang="" href="index.html">Tecnologias</a>
-                </li>
-            </ul>
+            <div class="hrefang-header">
+                <ul>
+                    <li>
+                        <a href="#inicio">Início</a>
+                    </li>
+                    <li>
+                        <a href="#sobre">Sobre mim</a>
+                    </li>
+                    <li>
+                        <a href="#projetos">Projetos</a>
+                    </li>
+                    <li>
+                        <a href="#habilidades">Tecnologias</a>
+                    </li>
+                </ul>
+            </div>
             <div class="icons_header"style="width: 31px;" >
                 <ul>
                     <li>
@@ -55,20 +58,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/stalkerbrotos/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/taique.mr/" target="_blank" rel="noopener noreferrer">
                             <img src="assets/instagram.svg" alt="">
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="place-conect">
-                <div class="conect">                   
-                    <span>Contate-me</span>
-                </div>
-            </div>
         </nav>
     </header>
-    <section class="intro-section">
+    <section id="inicio" class="intro-section">
         <div class="stars"></div>
         <div class="content-intro">
             <div class="text-intro">
@@ -76,31 +74,26 @@
                 <p class="name">Taique Mendes</p>
                 <p class="job">Desenvolvedor Fullstack!</p>
                 <div class="cv">
-                    <a href="assets/cvingles.docx" download>Download CV</a>
+                    <a href="assets/taique-cv.docx" download>Download CV</a>
                 </div>
-            </div>
-            <div class="logo">
-                <img src="assets/logo.jpg" alt="logo"/>
             </div>
         </div>
     </section>
     
     
-    <section class="about-me">
+    <section id="sobre" class="about-me">
         <div class="about-me-content">
             <h2 class="about">Sobre mim</h2>
             <p class="text-about">
-            Meu nome é Taique. Ao perceber o potencial 
-            promissor da programação para o mercado e o
-            quão proximo a tecnologia esta se tornando de replicar neurônios, Então iniciei minha jornada de exploração das linguagens
+            Meu nome é Taique, minha jornada na programação começou quando percebi o potencial promissor que ela tem no mercado e o quão próxima a tecnologia está de replicar a complexidade dos neurônios. Iniciei então minha jornada de exploração das linguagens
             de programação e o campo da inteligência artificial.
-            Atualmente estou focando nas tecnologias voltadas ao FrontEnd de Web.
+            Também estou constantemente atualizando meu conhecimento e explorando novas ferramentas para aprimorar minha habilidade no desenvolvimento web.
             </p>
         </div>
     </section>
 
     <!-- Projetos-->
-    <section class="projects">
+    <section id="projetos" class="projects">
         <div class="center-projects">
             <h2 class="project">Projetos</h2>
             <div class="projects-itens">
@@ -130,11 +123,11 @@
         </div>
     </section>
     
-    <section class="skills">
+    <section id="habilidades" class="skills">
         <div class="center-skills">
             <h2>Habilidades</h2>
             <div class="container-skills">
-                <div class="skill-box skill1 html-skill">
+                <div class="skill-box html-skill">
                     <img
                         style="width: 75px; height: 77px;"
                         class="icones-habilidades"
@@ -143,7 +136,7 @@
                     />
                     <p>HTML</p>
                 </div>
-                <div class="skill-box skill2 css-skill">
+                <div class="skill-box css-skill">
                     <img
                         style="width: 75px; height: 77px;"
                         class="icones-habilidades"
@@ -152,7 +145,7 @@
                     />
                     <p>CSS</p>
                 </div>
-                <div class="skill-box skill3 js-skill">
+                <div class="skill-box js-skill">
                     <img
                         style="width: 76px; height: 76px;"
                         class="icones-habilidades"
@@ -161,7 +154,7 @@
                         />
                         <p>JavaScript</p>
                 </div>
-                <div class="skill-box skill4 python-skill">
+                <div class="skill-box python-skill">
                     <img
                         class="icones-habilidades"
                         src="assets/python.svg"
@@ -169,7 +162,7 @@
                         />
                         <p>Python</p>
                 </div>
-                <div class="skill-box skill5 mysql-skill">
+                <div class="skill-box mysql-skill">
                     <img
                         class="icones-habilidades"
                         src="assets/mysql.svg"
@@ -177,7 +170,7 @@
                         />
                     <p>MySQL</p>
                 </div>
-                <div class="skill-box skill6 php-skill">
+                <div class="skill-box php-skill">
                     <img
                         class="icones-habilidades"
                         src="assets/php.svg"
@@ -185,117 +178,39 @@
                         />
                     <P>PHP</P>
                 </div>
+                <div class="skill-box django-skill">
+                    <img
+                        class="icones-habilidades"
+                        src="assets/djando.svg"
+                        alt="django-icon"
+                        />
+                    <P>Django</P>
+                </div>
             </div>
         </div>
     </section>
-    
-        <h1>Taique Mendes</h1>
-        <br>
-        <br>
-        <h3>Sobre mim</h3>
-        <p>Meu nome é Taique. Ao perceber o potencial promissor da programação para o mercado
-            de trabalho no final de 2022, iniciei minha jornada de exploração das linguagens
-            de programação e o campo da inteligência artificial no início de 2023.
-            Desde março de 2023, venho me dedicando intensamente ao estudo</p>
-    
-        <h3>Idiomas falo:</h3>
-        <ul>
-            <li>
-                <p>-Português</p>
-            </li>
-            <li>
-                <p>-Inglês</p>
-            </li>
-        </ul>
-    
-        <h4>Que posso ler:</h4>
-        <ul>
-            <li>
-                <p>-Todos.</p>
-            </li>
-        </ul>
-    
-    
-        <h4>Habilidades:</h4>
-        <ul>
-            <li>
-                <p>Comprometimento </p>
-            </li>
-            <li>
-                <p>Comunicação </p>
-            </li>
-            <li>
-                <p>Criatividade </p>
-            </li>
-            <li>
-                <p>Flexibilidade </p>
-            </li>
-            <li>
-                <p>Foco em resultados </p>
-            </li>
-            <li>
-                <p>Inovação </p>
-            </li>
-            <li>
-                <p>Inteligência emocional </p>
-            </li>
-            <li>
-                <p>Organização </p>
-            </li>
-            <li>
-                <p>Resiliência profissional </p>
-            </li>
-        </ul>
-    
-    
-        <h4>Ferramentas e Tecnologias:</h4>
-        <ul>
-    
-        <li><p>- Python ★★★☆☆☆☆☆☆    </p></li>
-        <li><p>- Git ★☆☆☆☆☆☆☆☆       </p></li>
-        <li><p>- Html 5 ★☆☆☆☆☆☆☆☆    </p></li>
-        <li><p>- CSS 3 ★☆☆☆☆☆☆☆☆     </p></li>
-        <li><p>- JavaScript ☆☆☆☆☆☆☆☆☆</p></li>
-        <li><p>- Django ★☆☆☆☆☆☆☆☆    </p></li>
-        <li><p>- SQL ☆☆☆☆☆☆☆☆☆       </p></li>
-        </ul>
-    
-    
-        <h3>Projetos:</h3>
-        <ul>
-            <li><p>- Blog - notícias de tecnologia.                                                 </p></li>
-            <li><p>- Site - 20 ações mais barata na bolsa brasileira.                          </p></li>
-        </ul>
-    </section>
-    
-    <br>
-    <br>
 
     <footer class="icons">
-        <a href="https://github.com/Apollyon81" target="_blank" rel="noopener noreferrer">
-            <img src="assets/github.svg" alt="">
-            <p>GitHub</p>
-        </a>
-        <a href="https://www.linkedin.com/in/taique-mendes-459577260/" target="_blank" rel="noopener noreferrer">
-            <img src="assets/linkdin.svg" alt="">
-            <p>Linkdin</p>
-        </a>
-        <a href="https://www.instagram.com/stalkerbrotos/" target="_blank" rel="noopener noreferrer">
-            <img src="assets/instagram.svg" alt="">
-            <p>Instagram</p>
-        </a>
-        
+        <div class="text-footer">
+            <p>E-mail para contato: taique.contact@gmail.com</p>
+            <p>© 2023 - Todos os diretos reservados à Taíque Mendes</p>
+            <p>Imagem da Exosfera de Marte</p>
+        </div>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/taique-mendes-459577260/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/linkdin.svg" alt="">
+                <p>Linkedin</p>
+            </a>
+            <a href="https://github.com/Apollyon81" target="_blank" rel="noopener noreferrer">
+                <img src="assets/github.svg" alt="">
+                <p>GitHub</p>
+            </a>
+            <a href="https://www.instagram.com/taique.mr/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/instagram.svg" alt="">
+                <p>Instagram</p>
+            </a>
+        </div>
     </footer>
-    <br>
-    <p>Contatos:
-        Recebe email e envia o contato.
-        taikeramos_1998@hotmail.com
     
-        Seguidores: TOTAL - Ramifica nas redes:
-    
-        Redes:
-        - Linkedin; (https://www.linkedin.com/in/taique-mendes-459577260/)
-        - instagram; (Usuario: stalkerbrotos)
-        - GitHub; (https://github.com/Apollyon81)</p>
 </body>
 </html>

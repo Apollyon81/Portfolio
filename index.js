@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
 
 
 const blinkingStars = [];
-const maxStars = 170; // Limite máximo de estrelas temporárias
+const maxStars =158; // Limite máximo de estrelas temporárias
 const starsContainer = document.querySelector('.stars');
 
 // Função para gerar tamanhos aleatórios com base em parâmetros
@@ -20,14 +20,14 @@ function getRandomStarSize(min, max) {
 
 // Função para definir o tamanho das estrelas fixas
 function setFixedStarSize(star) {
-    const size = getRandomStarSize(0.1, 3.6); // Tamanho das estrelas fixas (0.1 a 0.9)
+    const size = getRandomStarSize(0.1, 3.6); // Tamanho das estrelas fixas
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
 }
 
 // Função para definir o tamanho das estrelas piscantes
 function setBlinkingStarSize(star) {
-    const size = getRandomStarSize(0.1, 0.8); // Tamanho das estrelas piscantes (1 a 2)
+    const size = getRandomStarSize(0.1, 1.1); // Tamanho das estrelas piscantes
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
 }
@@ -64,11 +64,16 @@ function createBlinkingStar() {
     const timeout = Math.random() * 36000 + 6000;
 
     setTimeout(function () {
-        blinkingStars.shift();
-        star.remove();
-        setTimeout(createBlinkingStar, Math.random() * 9000); // Atraso aleatório entre 0 e 5 segundos para criar uma nova estrela
+        const index = blinkingStars.indexOf(star);
+        if (index !== -1) {
+            blinkingStars.splice(index, 0.1); // Remove a estrela da matriz
+            star.remove();
+        }
+
+        setTimeout(createBlinkingStar, Math.random() * 9000);
     }, timeout);
 }
+
 
 function addBlinkingStars(count) {
     const remainingStars = maxStars - blinkingStars.length;
@@ -96,13 +101,13 @@ function addFixedStars(count) {
 }
 
 // Inicialmente adiciona estrelas fixas e começa a adicionar estrelas piscantes
-addFixedStars(330); // Adiciona estrelas fixas (80%)
+addFixedStars(410); // Adiciona estrelas fixas (80%)
 setInterval(function () {
     const remainingStars = maxStars - blinkingStars.length;
     if (remainingStars > 0) {
-        addBlinkingStars(Math.min(remainingStars, 170));
+        addBlinkingStars(Math.min(remainingStars, 130));
     }
-}, 1000);
+}, 100);
 
 
 
@@ -146,6 +151,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
 
 
 

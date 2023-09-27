@@ -1,7 +1,7 @@
 body {
     font-family: 'Quando', serif;
-    border-left: 180px;
-    border-right: 180px;
+    border-left: 200px;
+    border-right: 200px;
     background-color: black;
     color: white;
 }
@@ -42,14 +42,14 @@ header {
     list-style-type: none;
     padding-right: 0;
     margin-left: 180px;
-    gap: 10px;
+    gap: 13px;
 }
 
 .header a {
     padding: 10px;
     text-decoration: none;
     color: white;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 520;
 }
 
@@ -61,9 +61,8 @@ header {
 .name-header {
     color: rgb(255, 253, 253);
     font-size: 33px;
-    padding-left: 180px;
+    margin-left: 170px;
 }
-
 
 
 .cube-container {
@@ -74,16 +73,16 @@ header {
 
 .cube {
     position: relative;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     transform-style: preserve-3d;
     animation: rotate 4s linear infinite;
 }
 
 .cube > div {
     position: absolute;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     opacity: 0.9;
     background: linear-gradient(to right, #09aec8, #001f4e49);
 }
@@ -98,11 +97,11 @@ header {
 }
 
 .s1 {
-    transform: translateZ(14px);
+    transform: translateZ(16px);
 }
 
 .s1-text {
-    font-size: 26px;
+    font-size: 30px;
     color: white;
     position: relative;
     padding-top: 2px;
@@ -112,15 +111,15 @@ header {
 }
 
 .s2 {
-    transform: rotateY(90deg) translateZ(14px);
+    transform: rotateY(90deg) translateZ(16px);
 }
 
 .s3 {
-    transform: rotateY(180deg) translateZ(14px);
+    transform: rotateY(180deg) translateZ(16px);
 }
 
 .s3-text {
-    font-size: 26px;
+    font-size: 30px;
     color: white;
     position: relative;
     padding-bottom: 0px;
@@ -131,19 +130,19 @@ header {
 }
 
 .s4 {
-    transform: rotateX(90deg) translateZ(14px);
+    transform: rotateX(90deg) translateZ(16px);
 }
 
 .s5 {
-    transform: rotateY(-90deg) translateZ(14px);
+    transform: rotateY(-90deg) translateZ(16px);
 }
 
 .s6 {
-    transform: rotateX(-90deg) translateZ(14px) rotate(180deg);
+    transform: rotateX(-90deg) translateZ(16px) rotate(180deg);
 }
 
 .s6-text {
-    font-size: 26px;
+    font-size: 30px;
     color: white;
     position: relative;
     padding-bottom: 4px;
@@ -158,6 +157,11 @@ header {
     100% {
         transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
     }
+}
+
+.hrefang-header {
+    margin-left: 180px;
+    margin-right: 100px;
 }
 
 .icons_header {
@@ -220,21 +224,6 @@ header {
     filter: invert(1);
 }
 
-.place-conect {
-    padding-left: 180px;
-}
-
-
-.conect {
-    border: 1px solid white;
-    height: 50px;
-    width: 270px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    font-size: 20px;
-    font-weight: 640;
-}
 
 
 .stars {
@@ -282,7 +271,7 @@ h2 {
 .intro-section {
     place-items: center;
     display: flex;
-    background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #5d47889f 40%, #8E5D52 51.05%);
+    background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 51.05%);
     height: 100vh;
     color: white;
     justify-content: center; 
@@ -293,7 +282,7 @@ h2 {
     z-index: 1;
     display: flex;
     margin-left: 340px;
-    margin-right: 310px;
+    margin-right: 340px;
     justify-content: space-between;
     width: calc(100% - 360px);
     align-items: center;
@@ -317,12 +306,10 @@ h2 {
     margin-top: 15px;
     display: flex;
     justify-content: center;
-    padding: 18px 40px;
     font-size: 36px;
     border: 1px solid white ;
     border-radius: 36px;
     background: linear-gradient(90.21deg, rgb(10, 0, 7) -5.91%, rgba(73, 47, 189, 1) 111.58%);
-    max-width: 100%;
     letter-spacing: 0;
     transition: letter-spacing 0.3s ease;
 }
@@ -331,16 +318,22 @@ h2 {
 .cv a {
     text-decoration: none;
     color: white;
-    z-index: 1;
+    z-index: 2;
+    padding: 15px 75px;
+    border-radius: 36px;
 }
 
 .cv:hover {
     letter-spacing: 2px;
 }
 
+.logo {
+    margin-right: 20px;
+}
+
 .logo img {
-    width: 360px;
-    height: 360px;
+    width: 340px;
+    height: 440px;
     border-radius: 50%;
     border: 1px solid rgba(128, 0, 128, 0.021);
 }
@@ -350,7 +343,7 @@ h2 {
     position: relative;
     width: 100%;
     z-index: 63;
-    background: linear-gradient(to bottom, rgba(15, 0, 15, 0.93) 27%, #654a9b7e 40%, #8e5d52 81.05%, rgba(15, 0, 15, 0.93) 93%);
+    background: linear-gradient(to bottom, rgb(29, 0, 29) 27%, #4e3a83 40%, #8e5d52 81.05%, rgba(15, 0, 15, 0.93) 93%);
     text-align: center;
     height: 81vh;
     display: flex;
@@ -397,7 +390,7 @@ h2 {
 
 .pro {
     z-index: 5;
-    background-color: #C4C4C4;
+    background-color: #aaaaaa;
     height: 195px;
     width: 310px;
     border-radius: 20px;
@@ -493,7 +486,7 @@ button {
 
 
 .skills {
-    height: 90ch;
+    height: 110ch;
     background: linear-gradient(to bottom, rgba(15, 0, 15, 0.93) 27%, #654a9b7e 40%, #8e5d52 81.05%, rgba(15, 0, 15, 0.93) 93%);
     display: flex;
 }
@@ -573,23 +566,48 @@ button {
     box-shadow: 0px 5px 11px gray;
 }
 
-.icons img {
-    width: 43px;
-    height: 43px;
+.django-skill {
+    box-shadow: 0px 5px 10px rgb(0, 100, 0);
 }
 
-.icons {
+footer {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 16ch;
+}
+
+.text-footer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 98px;
+}
+
+
+.text-footer p {
+    margin: 5px 0;
+    font-size:20px;
+}
+
+.footer-icons {
+    margin-left: 380px; /* Isso adiciona um espaço entre .text-footer e .footer-icons */
+    display: inline-flex;
+    gap: 30px;
 }
 
 .icons a {
-    margin: 20px;
+    align-items: center;
+    margin: 0 10px;
     text-align: center;
 }
 
-footer.icons p {
-    color: white;
+.icons p {
+    margin-top: 5px;
+}
+
+
+.icons img {
+    width: 43px;
+    height: 43px;
 }
 
