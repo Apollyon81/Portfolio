@@ -1,13 +1,20 @@
 body {
     font-family: 'Quando', serif;
-    border-left: 200px;
-    border-right: 200px;
     background-color: black;
     color: white;
 }
 
 
-header {
+@media screen and (max-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+    }
+}
+
+
+.header {
     position: fixed;
     width: 100%;
     background-color: rgba(196, 196, 196, 0.11);
@@ -19,9 +26,9 @@ header {
 }
 
 
-.header {
+.nav {
+    display: flex;
     transition: height 0.5s ease;
-    display: inline-flex;
     width: 100%;
     height: 90px;
     align-items: center;
@@ -31,12 +38,64 @@ header {
     margin-right: 180px;
 }
 
-.header.small {
-    transition: height 0.3s ease;
-    height: 70px;
+nav.small {
+    transition: height 0.5s ease; /* Tempo e efeito de transição */
+    height: 70px; /* Altura do header quando a classe small é aplicada */
 }
 
-.header ul {
+
+.hamburger {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+
+.hamburger ::before
+.hamburger ::after {
+    content: '≡';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+@media (max-width: 550px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vw;
+        width: 100vh;
+        background-color: rgb(54, 54, 54);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-in-out;
+        flex-direction: column;
+        justify-content:  space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+}
+ 
+
+.nav ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -45,7 +104,7 @@ header {
     gap: 13px;
 }
 
-.header a {
+.nav a {
     padding: 10px;
     text-decoration: none;
     color: white;
@@ -53,7 +112,7 @@ header {
     font-weight: 520;
 }
 
-.header li :hover {
+.nav li :hover {
     color: rgba(255, 255, 255, 0.692);
 }
 
@@ -160,8 +219,8 @@ header {
 }
 
 .hrefang-header {
-    margin-left: 180px;
-    margin-right: 100px;
+    margin-left: 140px;
+    margin-right: 140px;
 }
 
 .icons_header {
@@ -224,24 +283,24 @@ header {
     filter: invert(1);
 }
 
-
-
 .stars {
+    display: flex;
     position: absolute;
-    top: 34%;
-    left:-37%;
-    width: 120%;
-    height: 143%;
-    transform: rotate(64.13deg);
+    top: -10%;
+    left:-42%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-27deg);
     z-index: 0;
   }
 
+
 .star {
+    display: flex;
     position: absolute;
     background: white;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
-    transform-origin: center center;
     z-index: 0;
   }
 
@@ -267,6 +326,8 @@ h2 {
     text-align: center;
     justify-content: center;
 }
+
+
 
 .intro-section {
     place-items: center;
@@ -379,8 +440,10 @@ h2 {
 
 
 .projects {
+    display: flex;
     background: linear-gradient(to bottom, rgba(15, 0, 15, 0.93) 18%, #654a9b7e 40%, #dfa194 81.05%, #0e0818 90%);
     padding-top: 80px;
+    z-index: 3;
 }
 
 .projects h2 {
@@ -420,6 +483,7 @@ h2 {
     padding: 5% 0;
     transform: rotate(-50deg);
 }
+
 
 .projects-itens {
     margin-top: 80px;
@@ -472,7 +536,7 @@ button {
 }
 
 .github-project a:hover {
-    color: rgb(138, 165, 255);
+    color: rgb(40, 57, 116);
 }
 
 .pro.oculta {
@@ -486,9 +550,9 @@ button {
 
 
 .skills {
+    display: flex;
     height: 110ch;
     background: linear-gradient(to bottom, rgba(15, 0, 15, 0.93) 27%, #654a9b7e 40%, #8e5d52 81.05%, rgba(15, 0, 15, 0.93) 93%);
-    display: flex;
 }
 
 .container-skills {
@@ -504,7 +568,7 @@ button {
 }
 
 .skills h2 {
-    margin-top: 110px;
+    margin-top: 120px;
     margin-bottom: 80px;
 }
 
@@ -574,7 +638,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 16ch;
+    height: 120px;
 }
 
 .text-footer {
@@ -591,7 +655,7 @@ footer {
 
 .footer-icons {
     margin-left: 380px; /* Isso adiciona um espaço entre .text-footer e .footer-icons */
-    display: inline-flex;
+    display: flex;
     gap: 30px;
 }
 
