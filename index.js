@@ -10,6 +10,13 @@ window.addEventListener('scroll', () => {
 
 
 
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
+hamburger.addEventListener("click", () =>
+nav.classList.toggle("active"));
+
+
+
 const blinkingStars = [];
 const maxStars =198; // Limite máximo de estrelas temporárias
 const starsContainer = document.querySelector('.stars');
