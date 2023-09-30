@@ -2,7 +2,12 @@ body {
     font-family: 'Quando', serif;
     background-color: black;
     color: white;
+    display: flex; /* Adicione display: flex */
+    flex-direction: column; /* Alinhar verticalmente o conteúdo */
 }
+
+/* Resto do seu CSS... */
+
 
 .container {
     display: grid;
@@ -35,6 +40,7 @@ body {
 
 .nav-list {
     display: block;
+    flex-wrap: wrap;
 }
 
 nav.small {
@@ -43,63 +49,95 @@ nav.small {
 }
 
 
-.ham {
-    align-items: center;
-    justify-content: center;
-}
-
 .hamburger {
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-right: 0;
     padding-left: 0px;
+    display: none;
     border: none;
     background: none;
-    border-top: 3px solid white;
+    border-top: 3px solid #fff;
     cursor: pointer;
-    width: 35px;
-    height: 3px;
 }
 
-
-.hamburger::before,
-.hamburger::after {
-    content: " ";
-    display: block;
-    background-color: #fff;
-    margin-top: 5px;
-    width: 35px;
-    height: 3px;
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
 }
 
 @media (max-width: 750px) {
-    .hamburger {
-        display: block;
-        z-index: 1;
-    }
+  .hamburger {
+    display: block;
+    z-index: 1;
+  }
 
-    .nav-list {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        background-color: rgb(54, 54, 54);
-        clip-path: circle(100px at 90% -15%);
-        transition: 1s ease-in-out;
-        flex-direction: column;
-        justify-content:  space-around;
-        align-items: center;
-        gap: 0;
-        pointer-events: none;
-        clip-path: circle(100px at 90% -15%);
-        transition: 1s ease-in-out;
-    }
-    .nav.active .nav {
-        clip-path: circle(1500px at 90% -15%);
-        pointer-events: all;
-    }
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(128, 128, 128, 0.733);
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+
+    pointer-events: none;
+  }
+
+  .nav-list a {
+    font-size: 24px;
+    opacity: 0;
+  }
+
+  .nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
+
+  .nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
+
+  .nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
+
+  /* Estilos ativos */
+
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .nav.active .nav-list a {
+    opacity: 1;
+  }
+
+  .nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
 }
  
 
