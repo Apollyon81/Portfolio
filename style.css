@@ -2,11 +2,9 @@ body {
     font-family: 'Quando', serif;
     background-color: black;
     color: white;
-    display: flex; /* Adicione display: flex */
-    flex-direction: column; /* Alinhar verticalmente o conteúdo */
+    display: flex;
+    flex-direction: column; 
 }
-
-/* Resto do seu CSS... */
 
 
 .container {
@@ -32,15 +30,16 @@ body {
     width: 100%;
     height: 90px;
     align-items: center;
+    justify-content: center;
     opacity: 1;
     z-index: 5;
-    margin-left: 180px;
-    margin-right: 180px;
 }
 
 .nav-list {
     display: block;
     flex-wrap: wrap;
+    margin-right: 60px;
+    padding-left: 190px;
 }
 
 nav.small {
@@ -71,82 +70,12 @@ nav.small {
   transition: 0.3s;
 }
 
-@media (max-width: 750px) {
-  .hamburger {
-    display: block;
-    z-index: 1;
-  }
-
-  .nav-list {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(128, 128, 128, 0.733);
-    clip-path: circle(100px at 90% -15%);
-    transition: 1s ease-out;
-
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0;
-
-    pointer-events: none;
-  }
-
-  .nav-list a {
-    font-size: 24px;
-    opacity: 0;
-  }
-
-  .nav-list li:nth-child(1) a {
-    transition: 0.5s 0.2s;
-  }
-
-  .nav-list li:nth-child(2) a {
-    transition: 0.5s 0.4s;
-  }
-
-  .nav-list li:nth-child(3) a {
-    transition: 0.5s 0.6s;
-  }
-
-  /* Estilos ativos */
-
-  .nav.active .nav-list {
-    clip-path: circle(1500px at 90% -15%);
-    pointer-events: all;
-  }
-
-  .nav.active .nav-list a {
-    opacity: 1;
-  }
-
-  .nav.active .hamburger {
-    position: fixed;
-    top: 26px;
-    right: 16px;
-    border-top-color: transparent;
-  }
-
-  .nav.active .hamburger::before {
-    transform: rotate(135deg);
-  }
-
-  .nav.active .hamburger::after {
-    transform: rotate(-135deg);
-    top: -7px;
-  }
-}
  
 
 .nav ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    padding-right: 0;
-    margin-left: 180px;
     gap: 50px;
 }
 
@@ -166,7 +95,7 @@ nav.small {
 .name-header {
     color: rgb(255, 253, 253);
     font-size: 33px;
-    margin-left: 170px;
+    margin-left: 20px;
 }
 
 
@@ -182,6 +111,7 @@ nav.small {
     height: 32px;
     transform-style: preserve-3d;
     animation: rotate 4s linear infinite;
+    margin-right: 10px;
 }
 
 .cube > div {
@@ -270,7 +200,7 @@ nav.small {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 100px ;
+    margin-right: 7%;
 }
 
 .icons_header img {
@@ -279,7 +209,7 @@ nav.small {
 }
 
 .icons_header a {
-    display: inline-block;
+    display: flex;
     border-radius: 100%;
 }
 
@@ -392,6 +322,7 @@ h2 {
     width: calc(100% - 360px);
     align-items: center;
     max-width: 100%;
+    padding-left: 60px;
 }
 
 .text-intro p{
@@ -718,3 +649,78 @@ footer {
     height: 43px;
 }
 
+
+@media (max-width: 1050px) {
+    .hamburger {
+        display: block;
+        z-index: 99;
+    }
+  
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100ch;
+        height: 100vh;
+        background: rgba(32, 32, 32, 0.733);
+        clip-path: circle(100px at -90% 15%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        --bs-gutter-x: 1.5rem;
+        pointer-events: none;
+        padding-top: 180px;
+        padding-bottom: 130px;
+    }
+  
+    .icons_header {
+      display: inline-block;
+      margin-left: 20px;
+      
+    }
+  
+    .nav-list a {
+        font-size: 24px;
+        opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.4s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.6s;
+    }
+  
+    /* Estilos ativos */
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburger {
+      position: block;
+      top: 26px;
+      border-top-color: transparent;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
