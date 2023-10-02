@@ -9,6 +9,14 @@ window.addEventListener('scroll', () => {
 });
 
 
+// window.addEventListener('scroll', ()=> {
+//     if (window.scrollY > 0 ) {
+//         header.classList.add('menu-fixed')
+//     } else {
+//         header.classList.remove('menu-fixed')
+//     }
+// })
+
 
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
@@ -50,8 +58,8 @@ function createStar(isSmall, isBlinking) {
         star.classList.add('small');
     }
 
-    const x = Math.random() * 85;
-    const y = Math.random() * 1500;
+    const x = Math.random() * 95;
+    const y = Math.random() * 1400;
 
     star.style.left = `${x}%`;
     star.style.top = `${y}px`;
