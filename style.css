@@ -10,14 +10,13 @@ body {
 
 .container {
     display: grid;
-    flex-wrap: wrap;
 }
 
 
 .header {
     display: flex;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     background-color: rgba(196, 196, 196, 0.11);
     backdrop-filter: blur(3px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.336);
@@ -26,11 +25,10 @@ body {
     z-index: 9;
 }
 
-
 .nav {
     display: flex;
     transition: height 0.5s ease;
-    width: 100%;
+    width: 100vw;
     height: 90px;
     opacity: 1;
     z-index: 5;
@@ -48,30 +46,6 @@ nav.small {
     transition: height 0.5s ease; 
     height: 70px;
 }
-
-
-.hamburger {
-    padding-right: 0;
-    padding-left: 0px;
-    display: none;
-    border: none;
-    background: none;
-    border-top: 3px solid #fff;
-    cursor: pointer;
-}
-
-.hamburger::after,
-.hamburger::before {
-  content: " ";
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: #fff;
-  margin-top: 5px;
-  position: relative;
-  transition: 0.3s;
-}
-
  
 
 .nav ul {
@@ -538,12 +512,14 @@ h2 {
 }
 
 .container-skills {
+    background-attachment: fixed;
     margin-bottom: 30px;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
     gap: 29.5px;
     width: 100%;
+    height: auto;
     z-index: 1;
     margin-left: 12px;
     transition: transform 0.6s;
@@ -656,40 +632,51 @@ footer {
     height: 43px;
 }
 
-
-.header.active {
-    /* Estilos para o cabeçalho quando o menu hamburguer está ativo */
-    background-color: transparent; /* Define a cor de fundo como transparente */
-    border-bottom: none; /* Remove a borda inferior */
+#hamburger {
+    z-index: 99;
+    margin-top: 5vw;
+    margin-left: 15vw;
+    padding-right: 0;
+    padding-left: 0px;
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
 }
 
+#hamburger::after,
+#hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
 
 @media (max-width: 1150px) {
-    .hamburger {
+    #hamburger {
         display: block;
-        z-index: 9;
-    }
-  
-    .nav-list {
+        z-index: 99;
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100ch;
-        height: 100ch;
-        background: rgb(34, 34, 34);
-        clip-path: circle(100px at 90% -15%);
-        transition: 1s ease-out;
-        flex-direction: column;
-        justify-content: space-around;
+
+    }
+
+    .nav {
+        display: flex;
+        width: 100vw;
+        height: 60vw;
+        background-color: none;
+        border-bottom: none;
+        margin-bottom: none;
+        transition: height 0.5s ease;
+        color: white;
+        z-index: 9;
         align-items: center;
-        gap: 0;
-        pointer-events: none;
-      }
-  
-    .icons_header {
-      display: inline-block;
-      margin-left: 10px;
-      
+        justify-content: center;
     }
 
     .intro-section, .about-me, .projects, .skills {
@@ -700,24 +687,24 @@ footer {
   
     .nav-list a {
         font-size: 24px;
-        opacity: 0;
+        opacity: 1;
     }
   
-    .nav-list li:nth-child(1) a {
+    .header li:nth-child(1) a {
       transition: 0.5s 0.2s;
     }
   
-    .nav-list li:nth-child(2) a {
+    .header li:nth-child(2) a {
       transition: 0.5s 0.4s;
     }
   
-    .nav-list li:nth-child(3) a {
+    .header li:nth-child(3) a {
       transition: 0.5s 0.6s;
     }
   
     /* Estilos ativos */
   
-    .nav.active .nav-list {
+    .nav.active #itens {
       clip-path: circle(2500px at 90% -15%);
       pointer-events: all;
     }
@@ -840,5 +827,6 @@ footer {
 
       .intro-section, .about-me, .projects, .skills {
         max-width: 100%;
+        height: auto;
     } 
 }

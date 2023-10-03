@@ -9,20 +9,13 @@ window.addEventListener('scroll', () => {
 });
 
 
-// window.addEventListener('scroll', ()=> {
-//     if (window.scrollY > 0 ) {
-//         header.classList.add('menu-fixed')
-//     } else {
-//         header.classList.remove('menu-fixed')
-//     }
-// })
-
-
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector(".nav");
-
-hamburger.addEventListener("click", () => nav.classList.toggle("active"));
-
+function clickMenu() {
+    if (itens.style.display == 'block'){
+        itens.style.display = 'none'
+    } else {
+        itens.style.display = 'block'
+    }
+}
 
 
 const blinkingStars = [];
