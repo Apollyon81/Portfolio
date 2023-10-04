@@ -1,3 +1,5 @@
+
+
 body {
     font-family: 'Quando', serif;
     background-color: black;
@@ -8,9 +10,6 @@ body {
 }
 
 
-.container {
-    display: grid;
-}
 
 
 .header {
@@ -360,7 +359,6 @@ h2 {
 
 .about-me {
     position: relative;
-    width: 100%;
     background: linear-gradient(to bottom, rgb(29, 0, 29) 27%, #4e3a83 40%, #8e5d52 81.05%, rgba(15, 0, 15, 0.93) 93%);
     text-align: center;
     height: 81vh;
@@ -753,7 +751,7 @@ footer {
       }
 
       nav.small {
-        transition: height 0s ease; 
+        transition: height 0.5s ease; 
         height: 90px;
     }
 
@@ -765,13 +763,16 @@ footer {
         justify-content: center; 
         align-items: center;
       }
+       .about-me p {
+        text-indent: 0;
+       }
 }
 
 @media  (max-width: 480px) {
     .stars {
         display: flex;
         position: absolute;
-        top: 10%;
+        top: 18%;
         left: -49%;
         width: 100%;
         height: 100%;
