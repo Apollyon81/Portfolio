@@ -359,7 +359,6 @@ h2 {
 .about-me {
     position: relative;
     width: 100%;
-    z-index: 63;
     background: linear-gradient(to bottom, rgb(29, 0, 29) 27%, #4e3a83 40%, #8e5d52 81.05%, rgba(15, 0, 15, 0.93) 93%);
     text-align: center;
     height: 81vh;
@@ -632,102 +631,13 @@ footer {
     height: 43px;
 }
 
-#hamburger {
-    z-index: 99;
-    margin-top: 5vw;
-    margin-left: 15vw;
-    padding-right: 0;
-    padding-left: 0px;
-    display: none;
-    border: none;
-    background: none;
-    border-top: 3px solid #fff;
-    cursor: pointer;
-}
-
-#hamburger::after,
-#hamburger::before {
-  content: " ";
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: #fff;
-  margin-top: 5px;
-  position: relative;
-  transition: 0.3s;
-}
-
 @media (max-width: 1150px) {
-    #hamburger {
-        display: block;
-        z-index: 99;
-        position: fixed;
-
-    }
-
-    .nav {
-        display: flex;
-        width: 100vw;
-        height: 60vw;
-        background-color: none;
-        border-bottom: none;
-        margin-bottom: none;
-        transition: height 0.5s ease;
-        color: white;
-        z-index: 9;
-        align-items: center;
-        justify-content: center;
-    }
 
     .intro-section, .about-me, .projects, .skills {
         max-width: 100%;
     } 
 
 
-  
-    .nav-list a {
-        font-size: 24px;
-        opacity: 1;
-    }
-  
-    .header li:nth-child(1) a {
-      transition: 0.5s 0.2s;
-    }
-  
-    .header li:nth-child(2) a {
-      transition: 0.5s 0.4s;
-    }
-  
-    .header li:nth-child(3) a {
-      transition: 0.5s 0.6s;
-    }
-  
-    /* Estilos ativos */
-  
-    .nav.active #itens {
-      clip-path: circle(2500px at 90% -15%);
-      pointer-events: all;
-    }
-  
-    .nav.active .nav-list a {
-      opacity: 1;
-    }
-  
-    .nav.active .hamburger {
-      position: block;
-      top: 26px;
-      right: 16px;
-      border-top-color: transparent;
-    }
-  
-    .nav.active .hamburger::before {
-      transform: rotate(135deg);
-    }
-  
-    .nav.active .hamburger::after {
-      transform: rotate(-135deg);
-      top: -7px;
-    }
 
     .intro-section {
     place-items: center;
@@ -771,6 +681,7 @@ footer {
     
     .intro-section, .about-me, .projects, .skills {
         max-width: 100%;
+        max-height: 100%;
     } 
 }
 
