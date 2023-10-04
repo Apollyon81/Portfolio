@@ -17,7 +17,7 @@ body {
     display: flex;
     position: fixed;
     width: 100vw;
-    background-color: rgba(196, 196, 196, 0.11);
+    background-color: rgba(0, 0, 0, 0.623);
     backdrop-filter: blur(3px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.336);
     transition: height 0.5s ease;
@@ -38,8 +38,10 @@ body {
 
 .nav-list {
     display: flex;
-    flex-wrap: wrap;
-    margin-right: 60px;
+    margin-right:3vw;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 12vw;
 }
 
 nav.small {
@@ -48,14 +50,14 @@ nav.small {
 }
  
 
-.nav ul {
+.nav-list, .icons_header ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    gap: 50px;
+    gap: 5vh;
 }
 
-.nav a {
+.nav-list a {
     padding: 10px;
     text-decoration: none;
     color: white;
@@ -63,15 +65,17 @@ nav.small {
     font-weight: 520;
 }
 
-.nav li :hover {
+.nav-list li :hover {
     color: rgba(255, 255, 255, 0.692);
 }
 
+.logo-header {
+    display: flex;
+}
 
 .name-header {
     color: rgb(255, 253, 253);
     font-size: 33px;
-    margin-left: 20px;
     z-index: 1;
 }
 
@@ -80,7 +84,6 @@ nav.small {
     margin-left: 22px;
     perspective:  1000px;
     perspective-origin: 100% 100%;
-    margin-right: 12%;
     z-index: 1;
 }
 
@@ -90,7 +93,6 @@ nav.small {
     height: 32px;
     transform-style: preserve-3d;
     animation: rotate 4s linear infinite;
-    margin-right: 10px;
 }
 
 .cube > div {
@@ -179,8 +181,9 @@ nav.small {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 80px;
+    margin-left: 3vw;
     z-index: 1;
+    margin-right: 4px;
 }
 
 .icons_header img {
@@ -631,13 +634,50 @@ footer {
     height: 43px;
 }
 
-@media (max-width: 1150px) {
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .header {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .nav {
+        padding: 0.7rem 4rem;
+        justify-content: space-between;
+    }
+
+    .nav-list, .nav .icons_header{
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    
+    .open {
+        display: block;
+        display: flex;
+    }
 
     .intro-section, .about-me, .projects, .skills {
         max-width: 100%;
     } 
-
-
 
     .intro-section {
     place-items: center;
@@ -655,7 +695,6 @@ footer {
         left: -33%;
     }
 }
-
 
 
 @media  (max-width: 960px) {
