@@ -752,6 +752,11 @@ footer {
         overflow: hidden;
       }
 
+      nav.small {
+        transition: height 0s ease; 
+        height: 90px;
+    }
+
       .intro-section {
         place-items: center;
         display: flex;
