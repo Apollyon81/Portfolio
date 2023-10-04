@@ -297,7 +297,6 @@ h2 {
 }
 
 .content-intro {
-    
     z-index: 1;
     display: flex;
     margin-left: 340px;
@@ -398,6 +397,7 @@ h2 {
 
 
 .projects {
+    height: 77vh;
     display: flex;
     background: linear-gradient(to bottom, rgba(15, 0, 15, 0.93) 18%, #654a9b7e 40%, #dfa194 81.05%, #0e0818 90%);
     padding-top: 80px;
@@ -444,14 +444,11 @@ h2 {
 
 
 .projects-itens {
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     flex-wrap: wrap;
     gap: 29.5px;
     width: 100%;
     justify-content: center;
-    z-index: 0;
 }
 
 .projects button {
@@ -509,7 +506,7 @@ h2 {
 
 .skills {
     display: flex;
-    height: 110ch;
+    height: 90vh;
     background: linear-gradient(to bottom, rgba(15, 0, 15, 0.93) 27%, #654a9b7e 40%, #8e5d52 81.05%, rgba(15, 0, 15, 0.93) 93%);
 }
 
@@ -525,6 +522,7 @@ h2 {
     z-index: 1;
     margin-left: 12px;
     transition: transform 0.6s;
+    justify-content: center;
 }
 
 .skills h2 {
@@ -599,12 +597,14 @@ footer {
     align-items: center;
     justify-content: center;
     height: 120px;
+    padding: 50px 0;
+    flex-wrap: wrap;
 }
 
 .text-footer {
     display: flex;
     flex-direction: column;
-    margin-right: 98px;
+    margin-right: 198px;
 }
 
 .text-footer p {
@@ -644,8 +644,10 @@ footer {
 
 @media (max-width: 850px) {
     .header {
+        display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        width: 100vw;
     }
     .nav {
         padding: 0.7rem 4rem;
@@ -676,14 +678,14 @@ footer {
     }
 
     .intro-section, .about-me, .projects, .skills {
-        max-width: 100%;
+        width: 100vw;
+        height: 100vh;
     } 
 
     .intro-section {
     place-items: center;
     display: flex;
     background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 71.05%);
-    height: 100vh;
     color: white;
     justify-content: center; 
     align-items: center;
@@ -694,6 +696,25 @@ footer {
         top: -20%;
         left: -33%;
     }
+
+    .projects {
+        height: auto;
+    }
+    .skills {
+        height: auto;
+    }
+
+    .footer {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .text-footer {
+        margin-right: 0;
+    }
+    .footer-icons {
+        margin-left: 0;
+        margin-top: 2vh;
+    }   
 }
 
 
@@ -702,7 +723,6 @@ footer {
         place-items: center;
         display: flex;
         background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 62.25%);
-        height: 100vh;
         color: white;
         justify-content: center; 
         align-items: center;
@@ -713,15 +733,10 @@ footer {
         top: 5%;
         left: -20%;
         width: 100%;
-        height: 120%;
+        height: 100%;
         z-index: 0;
         overflow: hidden;
     }
-    
-    .intro-section, .about-me, .projects, .skills {
-        max-width: 100%;
-        max-height: 100%;
-    } 
 }
 
 @media  (max-width: 650px) {
@@ -730,8 +745,8 @@ footer {
         position: absolute;
         top: 15%;
         left: -79%;
-        width: 200%;
-        height: 130%;
+        width: 100%;
+        height: 100%;
         transform: rotate(-27deg);
         z-index: 0;
         overflow: hidden;
@@ -741,25 +756,20 @@ footer {
         place-items: center;
         display: flex;
         background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 61.05%);
-        height: 100vh;
         color: white;
         justify-content: center; 
         align-items: center;
       }
-
-      .intro-section, .about-me, .projects, .skills {
-        max-width: 100%;
-    } 
 }
 
 @media  (max-width: 480px) {
     .stars {
         display: flex;
         position: absolute;
-        top: 0%;
-        left: -29%;
-        width: 200%;
-        height: 130%;
+        top: 10%;
+        left: -49%;
+        width: 100%;
+        height: 100%;
         transform: rotate(-27deg);
         z-index: 0;
         overflow: hidden;
@@ -769,14 +779,8 @@ footer {
         place-items: center;
         display: flex;
         background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 61.05%);
-        height: 100vh;
         color: white;
         justify-content: center; 
         align-items: center;
       }
-
-      .intro-section, .about-me, .projects, .skills {
-        max-width: 100%;
-        height: auto;
-    } 
 }
