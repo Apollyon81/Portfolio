@@ -670,6 +670,10 @@ footer {
         justify-content: space-between;  
     }
 
+    .nav-list {
+        margin-right: 0;
+    }
+
     .hrefang-header, .icons_header {
         display: none;
     }
@@ -777,10 +781,5 @@ footer {
         color: white;
         justify-content: center; 
         align-items: center;
-      }
-
-      .intro-section, .about-me, .projects, .skills {
-        width: 100%;
-        height:100vh;
-    } 
+      } 
 }
