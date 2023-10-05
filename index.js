@@ -56,7 +56,7 @@ function createStar(isSmall, isBlinking) {
     }
 
     const x = Math.random() * 95;
-    const y = Math.random() * 1500;
+    const y = Math.random() * 1800;
 
     star.style.left = `${x}%`;
     star.style.top = `${y}px`;
