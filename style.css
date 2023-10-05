@@ -779,8 +779,8 @@ footer {
         position: absolute;
         top: 12vh;
         left: -71vw;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         transform: rotate(-27deg);
         z-index: 0;
         overflow: hidden;
