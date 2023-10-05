@@ -789,6 +789,10 @@ footer {
       .intro-section {
         background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 61.05%);
       }
+    
+    .about-me {
+        height: auto;
+    }
 
       .cv a {
         padding: 2vh 9vw;
