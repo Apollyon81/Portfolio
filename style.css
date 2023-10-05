@@ -1,21 +1,27 @@
-
-
+* {
+    padding: 0;
+    margin: 0;
+}
 body {
     font-family: 'Quando', serif;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
-    min-height: 100%; 
+    min-height: 100%;
+    margin-right: 0;
+    padding-right: 0; 
 }
 
 
-
+.container {
+    display: grid;
+}
 
 .header {
     display: flex;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.623);
     backdrop-filter: blur(3px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.336);
@@ -243,9 +249,9 @@ nav.small {
     display: flex;
     position: absolute;
     top: -10%;
-    left:-52%;
-    width: 100%;
-    height: 100%;
+    left:-54%;
+    width: 100vw;
+    height: 100vh;
     transform: rotate(-27deg);
     z-index: 0;
 }
@@ -286,25 +292,19 @@ h2 {
 
 
 .intro-section {
-    place-items: center;
     display: flex;
     background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 52%);
     height: 100vh;
-    color: white;
-    justify-content: center; 
-    align-items: center;
+    color: white; 
 }
 
 .content-intro {
     z-index: 1;
     display: flex;
-    margin-left: 340px;
+    margin-left: 420px;
     margin-right: 340px;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
-    max-width: 100%;
-    padding-left: 60px;
 }
 
 .text-intro p{
@@ -369,7 +369,6 @@ h2 {
 }
 
 .about-me-content {
-    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -506,6 +505,7 @@ h2 {
     display: flex;
     height: 90vh;
     background: linear-gradient(to bottom, rgba(15, 0, 15, 0.93) 27%, #654a9b7e 40%, #8e5d52 81.05%, rgba(15, 0, 15, 0.93) 93%);
+    justify-content: center;
 }
 
 .container-skills {
@@ -518,7 +518,6 @@ h2 {
     width: 100%;
     height: auto;
     z-index: 1;
-    margin-left: 12px;
     transition: transform 0.6s;
     justify-content: center;
 }
@@ -640,7 +639,7 @@ footer {
     display: none;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
     .header {
         display: flex;
         justify-content: center;
@@ -648,7 +647,7 @@ footer {
         width: 100vw;
     }
     .nav {
-        padding: 0.7rem 4rem;
+        padding: 0.7rem 2rem;
         justify-content: space-between;
     }
 
@@ -688,12 +687,6 @@ footer {
     justify-content: center; 
     align-items: center;
     }
-    
-    .stars {
-        display: flex;
-        top: -20%;
-        left: -33%;
-    }
 
     .projects {
         height: auto;
@@ -712,27 +705,21 @@ footer {
     .footer-icons {
         margin-left: 0;
         margin-top: 2vh;
+        margin-bottom: 2vh;        
     }   
 }
 
 
-@media  (max-width: 960px) {
+@media  (max-width: 950px) {
     .intro-section {
-        place-items: center;
-        display: flex;
         background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 62.25%);
-        color: white;
-        justify-content: center; 
-        align-items: center;
-      }
+    }
+
     .stars  {
-        display: flex;
-        position: absolute;
-        top: 5%;
-        left: -20%;
+        top: 17%;
+        left: -29%;
         width: 100%;
         height: 100%;
-        z-index: 0;
         overflow: hidden;
     }
 }
@@ -741,8 +728,8 @@ footer {
     .stars {
         display: flex;
         position: absolute;
-        top: 15%;
-        left: -79%;
+        top: 18%;
+        left: -33%;
         width: 100%;
         height: 100%;
         transform: rotate(-27deg);
@@ -756,24 +743,20 @@ footer {
     }
 
       .intro-section {
-        place-items: center;
-        display: flex;
         background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 61.05%);
-        color: white;
-        justify-content: center; 
-        align-items: center;
       }
-       .about-me p {
-        text-indent: 0;
-       }
+
+    .about-me p {
+    text-indent: 0;
+    }
 }
 
-@media  (max-width: 480px) {
+@media  (max-width: 483px) {
     .stars {
         display: flex;
         position: absolute;
         top: 18%;
-        left: -49%;
+        left: -45%;
         width: 100%;
         height: 100%;
         transform: rotate(-27deg);
@@ -782,15 +765,58 @@ footer {
       }
 
       .intro-section {
-        place-items: center;
-        display: flex;
         background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 61.05%);
-        color: white;
-        justify-content: center; 
-        align-items: center;
       }
-      
+
       .cv a {
-        padding: 2vh 12vw;
+        padding: 2vh 9vw;
       }
+}
+
+@media  (max-width: 380px) {
+    .stars {
+        display: flex;
+        position: absolute;
+        top: 12vh;
+        left: -71vw;
+        width: 100vw;
+        height: 100vh;
+        transform: rotate(-27deg);
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .intro-section {
+        background: linear-gradient(63.13deg, rgba(37, 1, 37, 0.363) 30%, #6045969f 40%, #8E5D52 61.05%);
+      }
+
+      .cv a {
+        padding: 2vh 9vw;
+      }
+
+      .content-intro {
+        justify-content: center;
+      }
+      .center-projects {
+        width: 100%;
+      }
+}
+
+@media (max-width: 290px) {
+    .about-me {
+        height: auto;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .content-intro {
+        display: flex;
+        margin-left: 300px;
+    }
+    .content-intro, .footer-icons, .text-footer, .github-project, .container-skills {
+        width: 100vw;
+        gap: 0;
+    }
 }

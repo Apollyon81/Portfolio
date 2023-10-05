@@ -23,7 +23,7 @@ function menuShow() {
 
 
 const blinkingStars = [];
-const maxStars =198; // Limite máximo de estrelas temporárias
+const maxStars =207; // Limite máximo de estrelas temporárias
 const starsContainer = document.querySelector('.stars');
 
 // Função para gerar tamanhos aleatórios com base em parâmetros
@@ -56,7 +56,7 @@ function createStar(isSmall, isBlinking) {
     }
 
     const x = Math.random() * 95;
-    const y = Math.random() * 1400;
+    const y = Math.random() * 1500;
 
     star.style.left = `${x}%`;
     star.style.top = `${y}px`;
@@ -115,7 +115,7 @@ function addFixedStars(count) {
 }
 
 // Inicialmente adiciona estrelas fixas e começa a adicionar estrelas piscantes
-addFixedStars(430); // Adiciona estrelas fixas (80%)
+addFixedStars(480); // Adiciona estrelas fixas (80%)
 setInterval(function () {
     const remainingStars = maxStars - blinkingStars.length;
     if (remainingStars > 0) {
