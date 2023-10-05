@@ -789,4 +789,8 @@ footer {
         justify-content: center; 
         align-items: center;
       }
+      
+      .cv a {
+        padding: 13px 70px;
+      }
 }
