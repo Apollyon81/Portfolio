@@ -23,7 +23,7 @@ function menuShow() {
 
 
 const blinkingStars = [];
-const maxStars =207; // Limite máximo de estrelas temporárias
+const maxStars =407; // Limite máximo de estrelas temporárias
 const starsContainer = document.querySelector('.stars');
 
 // Função para gerar tamanhos aleatórios com base em parâmetros
@@ -115,7 +115,7 @@ function addFixedStars(count) {
 }
 
 // Inicialmente adiciona estrelas fixas e começa a adicionar estrelas piscantes
-addFixedStars(480); // Adiciona estrelas fixas (80%)
+addFixedStars(630); // Adiciona estrelas fixas (80%)
 setInterval(function () {
     const remainingStars = maxStars - blinkingStars.length;
     if (remainingStars > 0) {
