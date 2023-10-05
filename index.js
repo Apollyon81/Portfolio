@@ -75,12 +75,12 @@ function createBlinkingStar() {
     const star = createStar(true, true);
     starsContainer.appendChild(star);
 
-    const timeout = Math.random() * 46000 + 3000;
+    const timeout = Math.random() * 52000 + 3000;
 
     setTimeout(function () {
         const index = blinkingStars.indexOf(star);
         if (index !== -1) {
-            blinkingStars.splice(index, 0.1); // Remove a estrela da matriz
+            blinkingStars.splice(index, 0.5); // Remove a estrela da matriz
             star.remove();
         }
 
