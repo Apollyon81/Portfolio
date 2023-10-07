@@ -130,10 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Função para alternar o texto do botão
     function alternarTextoBotao() {
-        if (button.textContent === "Ver mais") {
-            button.textContent = "Ver menos";
+        if (button.textContent === "View less") {
+            button.textContent = "View more";
         } else {
-            button.textContent = "Ver mais";
+            button.textContent = "View less";
         }
     }
 
